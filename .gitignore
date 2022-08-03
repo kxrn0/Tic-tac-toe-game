@@ -1,0 +1,4 @@
+*.fig
+README-template.md
+preview.jpg
+node_modules/
