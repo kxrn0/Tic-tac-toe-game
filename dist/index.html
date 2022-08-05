@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <title>Tic Tac Toe</title>
+<script defer src="main.js"></script></head>
+<body>
+  <!-- 
+    adding and removing the class for hover each time the turn changes seems like the most based way to do this
+   -->
+  <main>
+    <section class="new-game-screen">
+      <div class="screen-content">
+        <img src="./logo.svg" alt="logo" class="logo">
+        <div class="player-select">
+          <h2 class="turn-feedback">PICK PLAYER 1'S MARK</h2>
+          <div class="options">
+            <label for="option-x">
+              <input type="radio" id="option-x" name="option-mark" checked>
+              <img src="./icon-x-black.svg" alt="x icon">
+            </label>
+            <label for="option-o">
+              <input type="radio" id="option-o" name="option-mark">
+              <img src="./icon-o-black.svg" alt="o icon">
+            </label>
+          </div>
+          <p class="footnote">REMEMBER: X GOES FIRST</p>
+        </div>
+        <div class="new-age-buttons">
+          <button class="new-game-cpu">NEW GAME (VS CPU)</button>
+          <button class="new-game-player">NEW GAME (VS PLAYER)</button>
+        </div>
+      </div>
+    </section>
+    <section class="game-board-screen">
+      <div class="screen-content">
+        <div class="info">
+          <img src="./logo.svg" alt="logo" class="info-logo">
+          <div class="turn">
+            <img src="./icon-x-black.svg" alt="turn">
+            <p>TURN</p>
+          </div>
+          <button class="reset">
+            <img src="./icon-restart.svg" alt="restart">
+          </button>
+        </div>
+        <div class="board">
+          <div class="pad"></div>
+          <div class="pad x"></div>
+          <div class="pad"></div>
+          <div class="pad"></div>
+          <div class="pad o"></div>
+          <div class="pad"></div>
+          <div class="pad o"></div>
+          <div class="pad"></div>
+          <div class="pad x"></div>
+        </div>
+        <div class="results">
+          <div class="player-x-results result-info">
+            <p class="player-label">X (P2)</p>
+            <p class="result-number">4</p>
+          </div>
+          <div class="ties result-info">
+            <p class="player-label">TIES</p>
+            <p class="result-number">2</p>
+          </div>
+          <div class="player-o-results result-info">
+            <p class="player-label">O (P1)</p>
+            <p class="result-number">3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+ Z</body>
+</html>

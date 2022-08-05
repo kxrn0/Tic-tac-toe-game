@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: outfit;
+    src: url("./assets/fonts/Outfit-Medium.ttf");
+}
+
+@font-face {
+    font-family: outfit-bold;
+    src: url("./assets/fonts/Outfit-Bold.ttf");
+}
+
+:root {
+    --dark-navy: #1A2A33;
+    --semi-dark-navy: #1F3641;
+    --pads-shadow: #10212A;
+    --silver: #A8BFC9;
+    --gray: #A8A8A8;
+    --light-yellow: #F2B137;
+    --light-blue: #31C3BD;
+    --half-tone: #A8BFC90D;
+    --light-yellow-hover: #FFC860;
+    --light-blue-hover: #65E9E4;
+    --gray-filter: invert(56%) sepia(0%) saturate(5236%) hue-rotate(149deg) brightness(118%) contrast(97%);
+}
+
+body {
+    background: var(--dark-navy);
+}
+
+.screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
