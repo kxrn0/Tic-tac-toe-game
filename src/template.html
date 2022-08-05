@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <title>Tic Tac Toe</title>
 </head>
+
 <body>
   <!-- 
     adding and removing the class for hover each time the turn changes seems like the most based way to do this
@@ -18,11 +20,11 @@
           <h2 class="turn-feedback">PICK PLAYER 1'S MARK</h2>
           <div class="options">
             <label for="option-x">
-              <input type="radio" id="option-x" name="option-mark" checked>
+              <input type="radio" id="option-x" name="option-mark" aria-label="x-turn" checked>
               <img src="./icon-x-black.svg" alt="x icon">
             </label>
             <label for="option-o">
-              <input type="radio" id="option-o" name="option-mark">
+              <input type="radio" id="option-o" name="option-mark" aria-label="o-turn">
               <img src="./icon-o-black.svg" alt="o icon">
             </label>
           </div>
@@ -47,15 +49,17 @@
           </button>
         </div>
         <div class="board">
-          <div class="pad"></div>
+          <!-- *... -->
+          <div class="pad x-hover"></div>
           <div class="pad x"></div>
-          <div class="pad"></div>
-          <div class="pad"></div>
+          <div class="pad o-hover"></div>
+          <div class="pad x-hover"></div>
           <div class="pad o"></div>
-          <div class="pad"></div>
+          <div class="pad x-hover"></div>
           <div class="pad o"></div>
-          <div class="pad"></div>
+          <div class="pad o-hover"></div>
           <div class="pad x"></div>
+          <!-- ...* -->
         </div>
         <div class="results">
           <div class="player-x-results result-info">
@@ -73,5 +77,26 @@
         </div>
       </div>
     </section>
- Z</body>
+    <section class="game-over-screen">
+      <div class="screen-content x-winner-result">
+        <p class="who-won">YOU WON!</p>
+        <div class="winner-results">
+          <img src="./icon-x.svg" alt="">
+          <h2>TAKES THE ROUND</h2>
+        </div>
+        <div class="buttons">
+          <button class="cancel-button debutton">QUIT</button>
+          <button class="continue-button debutton">NEXT ROUND</button>
+        </div>
+      </div>
+    </section>
+    <section class="restart-screen">
+      <div class="screen-content">
+        <h2>RESTART GAME?</h2>
+        <div class="buttons">
+          <button class="debutton cancel-button">NO, CANCEL</button>
+          <button class="debutton continue-button">YES, RESTART</button>
+        </div>
+      </div>
+    </section>
 </html>

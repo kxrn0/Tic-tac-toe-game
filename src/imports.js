@@ -12,3 +12,5 @@ import "./reset.css";
 import "./style.css";
 import "./new_game.css";
 import "./board.css";
+import "./game_over.css";
+import "./restart.css";

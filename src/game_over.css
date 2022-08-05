@@ -1,0 +1,96 @@
+.game-over-screen {
+    background: rgb(0, 0, 0, .5);
+    position: fixed;
+    /* *... */
+    top: -100%;
+    /* top: 0; */
+    /* ...* */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: top .33s;
+}
+
+.game-over-screen .screen-content {
+    background: var(--dark-navy);
+    width: 100%;
+    padding: 45px;
+}
+
+.game-over-screen .who-won {
+    color: var(--silver);
+    font-family: outfit-bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 23px;
+}
+
+.game-over-screen .winner-results {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 31px;
+}
+
+.game-over-screen .winner-results img {
+    width: 64px;
+}
+
+.game-over-screen .winner-results h2 {
+    font-size: 40px;
+    font-family: outfit-bold;
+    line-height: 50px;
+    letter-spacing: 2.5px;
+}
+
+.game-over-screen .x-winner-result h2 {
+    color: var(--light-blue);
+}
+
+.game-over-screen .o-winner-result h2 {
+    color: var(--light-yellow);
+}
+
+.game-over-screen .no-winner-result {
+    color: var(--silver);
+}
+
+.game-over-screen .no-winner-result img {
+    display: none;
+}
+
+.game-over-screen .no-winner-result p {
+    display: none;
+}
+
+.game-over-screen .buttons {
+    display: flex;
+    gap: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    .game-over-screen .who-won {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: .88px;
+        margin-bottom: 16px;
+    }
+    
+    .game-over-screen .winner-results {
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .game-over-screen .winner-results img {
+        width: 30px;
+    }
+
+    .game-over-screen .winner-results h2 {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1.5px;
+    }
+}

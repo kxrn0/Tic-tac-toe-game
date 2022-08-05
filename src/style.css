@@ -19,6 +19,7 @@
     --semi-dark-navy: #1F3641;
     --pads-shadow: #10212A;
     --silver: #A8BFC9;
+    --silver-hover: #DBE8ED;
     --gray: #A8A8A8;
     --light-yellow: #F2B137;
     --light-blue: #31C3BD;
@@ -32,8 +33,47 @@ body {
     background: var(--dark-navy);
 }
 
+button {
+    transition: background-color .33s, transform .33s;
+}
+
+button:active {
+    transform: scale(.99);
+}
+
 .screen-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.debutton {
+    color: var(--dark-navy);
+    border-radius: 10px;
+    border: none;
+    padding: 17px;
+    padding-top: 15px;
+    font-family: outfit-bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    transition: background-color .33s;
+}
+
+.debutton.cancel-button {
+    background: var(--silver);
+    box-shadow: inset 0px -4px 0px #6B8997;
+}
+
+.debutton.continue-button {
+    background: var(--light-yellow);
+    box-shadow: inset 0px -4px 0px #CC8B13;
+}
+
+.debutton.cancel-button:hover {
+    background: var(--silver-hover);
+}
+
+.debutton.continue-button:hover {
+    background: var(--light-yellow-hover);
 }

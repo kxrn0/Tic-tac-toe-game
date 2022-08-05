@@ -55,6 +55,11 @@
     border-radius: 10px;
     box-shadow: inset 0px -4px 0px #6B8997;
     border: none;
+    transition: background-color .33s;
+}
+
+.game-board-screen .info .reset:hover {
+    background: var(--silver-hover);
 }
 
 .game-board-screen .info .reset img {
@@ -113,9 +118,88 @@
 }
 
 .game-board-screen .board .pad {
-    background: var(--semi-dark-navy);
+    background-color: var(--semi-dark-navy);
+    background-size: 64px 64px;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 140px;
     height: 140px;
     border-radius: 15px;
     box-shadow: inset 0px -8px 0px #10212A;
+}
+
+.game-board-screen .board .x {
+    background-image: url("./assets/icon-x.svg");
+}
+
+.game-board-screen .board .o {
+    background-image: url("./assets/icon-o.svg");
+}
+
+.game-board-screen .board .x-hover:hover {
+    background-image: url("./assets/icon-x-outline.svg");
+}
+
+.game-board-screen .board .o-hover:hover {
+    background-image: url("./assets/icon-o-outline.svg");
+}
+
+@media screen and (max-width: 480px) {
+    .game-board-screen .info {
+        width: 330px;
+    }
+
+    .game-board-screen .info .reset {
+        width: 40px;
+        height: 40px;
+        padding: 12.3px;
+        border-radius: 5px;
+    }
+
+    .game-board-screen .info .reset img {
+        width: 15px;
+    }
+
+    .game-board-screen .board .pad {
+        background-size: 40px 40px;
+        width: 96px;
+        height: 96px;
+        border-radius: 10px;
+    }
+
+    .game-board-screen .info .turn {
+        width: 96px;
+        padding: 13px 15px;
+        padding-top: 9px;
+        margin-right: 30px;
+        border-radius: 5px;
+    }
+    
+    .game-board-screen .info .turn img {
+        width: 16px;
+    }
+    
+    .game-board-screen .info .turn p {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: .88px;
+    }
+
+    .game-board-screen .results .result-info {
+        width: 96px;
+        height: 64px;
+        border-radius: 10px;
+    }
+
+    .game-board-screen .results .player-label {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: .75px;
+    }
+
+    .game-board-screen .results .result-number {
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 1.25px;
+    }
 }
