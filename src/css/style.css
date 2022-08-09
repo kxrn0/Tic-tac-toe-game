@@ -57,6 +57,7 @@ button:active {
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
+    width: max-content;
     transition: background-color .33s;
 }
 
@@ -85,3 +86,18 @@ button:active {
 .shown {
     top: 0;
 }
+
+/* @media screen and (max-width: 480px) {
+    .debutton {
+        color: var(--dark-navy);
+        border-radius: 10px;
+        border: none;
+        padding: 17px;
+        padding-top: 15px;
+        font-family: outfit-bold;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        transition: background-color .33s;
+    }
+} */
