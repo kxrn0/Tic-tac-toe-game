@@ -9,22 +9,19 @@
 <script defer src="main.js"></script></head>
 
 <body>
-  <!-- 
-    adding and removing the class for hover each time the turn changes seems like the most based way to do this
-   -->
   <main>
-    <section class="new-game-screen">
+    <section class="new-game-screen shown">
       <div class="screen-content">
         <img src="./logo.svg" alt="logo" class="logo">
         <div class="player-select">
           <h2 class="turn-feedback">PICK PLAYER 1'S MARK</h2>
           <div class="options">
             <label for="option-x">
-              <input type="radio" id="option-x" name="option-mark" aria-label="x-turn" checked>
+              <input type="radio" id="option-x" name="option-mark" data-label="x" checked>
               <img src="./icon-x-black.svg" alt="x icon">
             </label>
             <label for="option-o">
-              <input type="radio" id="option-o" name="option-mark" aria-label="o-turn">
+              <input type="radio" id="option-o" name="option-mark" data-label="o">
               <img src="./icon-o-black.svg" alt="o icon">
             </label>
           </div>
@@ -33,6 +30,16 @@
         <div class="new-age-buttons">
           <button class="new-game-cpu">NEW GAME (VS CPU)</button>
           <button class="new-game-player">NEW GAME (VS PLAYER)</button>
+        </div>
+      </div>
+    </section>
+    <section class="level-screen shown">
+      <div class="screen-content">
+        <h2>DIFFICULTY</h2>
+        <div class="buttons-container">
+          <button class="debutton easy">Easy</button>
+          <button class="debutton medium">Medium</button>
+          <button class="debutton hard">Hard</button>
         </div>
       </div>
     </section>
@@ -49,17 +56,16 @@
           </button>
         </div>
         <div class="board">
-          <!-- *... -->
-          <div class="pad x-hover"></div>
-          <div class="pad x"></div>
-          <div class="pad o-hover"></div>
-          <div class="pad x-hover"></div>
-          <div class="pad o"></div>
-          <div class="pad x-hover"></div>
-          <div class="pad o"></div>
-          <div class="pad o-hover"></div>
-          <div class="pad x"></div>
-          <!-- ...* -->
+          <div class="blocker inactive-block"></div>
+          <div class="pad" data-index="0"></div>
+          <div class="pad" data-index="1"></div>
+          <div class="pad" data-index="2"></div>
+          <div class="pad" data-index="3"></div>
+          <div class="pad" data-index="4"></div>
+          <div class="pad" data-index="5"></div>
+          <div class="pad" data-index="6"></div>
+          <div class="pad" data-index="7"></div>
+          <div class="pad" data-index="8"></div>
         </div>
         <div class="results">
           <div class="player-x-results result-info">
@@ -77,11 +83,11 @@
         </div>
       </div>
     </section>
-    <section class="game-over-screen">
+    <section class="game-over-screen hidden">
       <div class="screen-content x-winner-result">
         <p class="who-won">YOU WON!</p>
         <div class="winner-results">
-          <img src="./icon-x.svg" alt="">
+          <img src="./icon-x.svg" alt="winner icon">
           <h2>TAKES THE ROUND</h2>
         </div>
         <div class="buttons">
@@ -90,7 +96,7 @@
         </div>
       </div>
     </section>
-    <section class="restart-screen">
+    <section class="restart-screen hidden">
       <div class="screen-content">
         <h2>RESTART GAME?</h2>
         <div class="buttons">
@@ -99,4 +105,7 @@
         </div>
       </div>
     </section>
+  </main>
+</body>
+
 </html>

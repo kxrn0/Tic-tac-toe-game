@@ -111,10 +111,27 @@
 }
 
 .game-board-screen .board {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.game-board-screen .board .blocker {
+    background: rgba(7, 3, 66, 0.15);
+    position: absolute;
+    border-radius: 10px;
+}
+
+.game-board-screen .board .blocker.active-block {
+    width: 100%;
+    height: 100%;
+}
+
+.game-board-screen .board .blocker.inactive-block {
+    width: 0;
+    height: 0;
 }
 
 .game-board-screen .board .pad {
@@ -129,19 +146,19 @@
 }
 
 .game-board-screen .board .x {
-    background-image: url("./assets/icon-x.svg");
+    background-image: url("../assets/icon-x.svg");
 }
 
 .game-board-screen .board .o {
-    background-image: url("./assets/icon-o.svg");
+    background-image: url("../assets/icon-o.svg");
 }
 
 .game-board-screen .board .x-hover:hover {
-    background-image: url("./assets/icon-x-outline.svg");
+    background-image: url("../assets/icon-x-outline.svg");
 }
 
 .game-board-screen .board .o-hover:hover {
-    background-image: url("./assets/icon-o-outline.svg");
+    background-image: url("../assets/icon-o-outline.svg");
 }
 
 @media screen and (max-width: 480px) {

@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: outfit;
-    src: url("./assets/fonts/Outfit-Medium.ttf");
+    src: url("../assets/fonts/Outfit-Medium.ttf");
 }
 
 @font-face {
     font-family: outfit-bold;
-    src: url("./assets/fonts/Outfit-Bold.ttf");
+    src: url("../assets/fonts/Outfit-Bold.ttf");
 }
 
 :root {
@@ -76,4 +76,12 @@ button:active {
 
 .debutton.continue-button:hover {
     background: var(--light-yellow-hover);
+}
+
+.hidden {
+    top: -100%;
+}
+
+.shown {
+    top: 0;
 }

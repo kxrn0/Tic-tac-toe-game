@@ -8,9 +8,10 @@ import xIconOutline from "./assets/icon-x-outline.svg";
 import oIconOutline from "./assets/icon-o-outline.svg";
 import restart from "./assets/icon-restart.svg";
 
-import "./reset.css";
-import "./style.css";
-import "./new_game.css";
-import "./board.css";
-import "./game_over.css";
-import "./restart.css";
+import "./css/reset.css";
+import "./css/style.css";
+import "./css/new_game.css";
+import "./css/board.css";
+import "./css/game_over.css";
+import "./css/restart.css";
+import "./css/levels.css";
