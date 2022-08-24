@@ -42,6 +42,7 @@ let player1, player2, ties, xTurn, ai, boardState, timeours, level;
 
 newGameCPU.addEventListener("click", () => {
     ai = true;
+    xTurn = true;
     handle_screen(false, newGameScreen);
 });
 
@@ -83,6 +84,7 @@ hard.addEventListener("click", () => {
 
 quit.addEventListener("click", () => {
     init();
+    reset_board();
     handle_screen(false, gameOverScreen);
     handle_screen(true, levelScreen);
     handle_screen(true, newGameScreen);

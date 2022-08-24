@@ -1600,6 +1600,7 @@ let player1, player2, ties, xTurn, ai, boardState, timeours, level;
 
 newGameCPU.addEventListener("click", () => {
     ai = true;
+    xTurn = true;
     (0,_interface_js__WEBPACK_IMPORTED_MODULE_1__.handle_screen)(false, newGameScreen);
 });
 
@@ -1641,6 +1642,7 @@ hard.addEventListener("click", () => {
 
 quit.addEventListener("click", () => {
     init();
+    reset_board();
     (0,_interface_js__WEBPACK_IMPORTED_MODULE_1__.handle_screen)(false, gameOverScreen);
     (0,_interface_js__WEBPACK_IMPORTED_MODULE_1__.handle_screen)(true, levelScreen);
     (0,_interface_js__WEBPACK_IMPORTED_MODULE_1__.handle_screen)(true, newGameScreen);
