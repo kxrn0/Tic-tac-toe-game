@@ -161,7 +161,7 @@
     background-image: url("../assets/icon-o-outline.svg");
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .game-board-screen .info {
         width: 330px;
     }
